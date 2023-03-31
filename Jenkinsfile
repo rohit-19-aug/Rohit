@@ -1,6 +1,8 @@
 pipeline {
     agent none
-    maven '3.6.3'
+    tools{
+        maven '3.6.3'
+    }
     stages {
         stage('Test stage') {
             agent any
