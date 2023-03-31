@@ -1,10 +1,11 @@
 pipeline {
     agent none
+    maven '3.6.3'
     stages {
-        stage('Example') {
+        stage('Test stage') {
             agent any
             steps {
-                echo 'Hello World'
+                sh 'mvn test'
             }
         }
     }
