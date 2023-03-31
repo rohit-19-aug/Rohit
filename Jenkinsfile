@@ -17,4 +17,11 @@ pipeline {
       }
     }
   }
+  post{
+        always{
+            mail to: "ska78657@gmail.com",
+            subject: "Build result",
+            body: "success"
+        }
+    }
 }
