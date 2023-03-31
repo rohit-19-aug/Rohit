@@ -18,10 +18,14 @@ pipeline {
     }
   }
   post{
-        always{
+        success{
             mail to: "ska78657@gmail.com",
-            subject: "Build result",
+            subject: "Build is successfull",
             body: "success"
         }
+    failure{
+      mail to: "ska78657@gmail.com",
+            subject: "Build is failed",
+            body: "failed"
     }
 }
