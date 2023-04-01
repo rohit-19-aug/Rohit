@@ -9,10 +9,10 @@ pipeline {
         echo 'build is completed'
       }
     }
-  }
   stage ('testing at production') {
       steps {
         sh 'mvn test'
       }
     }
+  }
 }
