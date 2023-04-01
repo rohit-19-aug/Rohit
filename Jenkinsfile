@@ -9,6 +9,11 @@ pipeline {
         sh 'mvn clean package'
       }
     }
+    stage ('Testing') {
+      steps {
+      sh 'mvn test' 
+        }
+      }
     stage ('Deploy') {
       steps {
         script {
