@@ -10,4 +10,9 @@ pipeline {
       }
     }
   }
+  stage ('testing at production') {
+      steps {
+        sh 'mvn test'
+      }
+    }
 }
